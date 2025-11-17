@@ -1,17 +1,6 @@
 // src/pages/superadmin/DashboardSuperadmin.jsx
 import React from "react";
 import { motion } from "framer-motion";
-import {
-    BarChart,
-    Bar,
-    LineChart,
-    Line,
-    XAxis,
-    YAxis,
-    CartesianGrid,
-    Tooltip,
-    ResponsiveContainer,
-} from "recharts";
 
 const DashboardSuperadmin = () => {
     const stats = [
@@ -19,22 +8,6 @@ const DashboardSuperadmin = () => {
         { label: "Proyek Selesai", value: 34 },
         { label: "Total Klien", value: 18 },
         { label: "Jumlah Tukang", value: 55 },
-    ];
-
-    const progressData = [
-        { name: "Jan", progress: 40 },
-        { name: "Feb", progress: 50 },
-        { name: "Mar", progress: 65 },
-        { name: "Apr", progress: 70 },
-        { name: "Mei", progress: 78 },
-        { name: "Jun", progress: 85 },
-    ];
-
-    const financialData = [
-        { month: "Jan", pemasukan: 120, pengeluaran: 80 },
-        { month: "Feb", pemasukan: 150, pengeluaran: 90 },
-        { month: "Mar", pemasukan: 200, pengeluaran: 110 },
-        { month: "Apr", pemasukan: 250, pengeluaran: 150 },
     ];
 
     const activities = [
@@ -69,43 +42,27 @@ const DashboardSuperadmin = () => {
                 ))}
             </div>
 
-            {/* Grafik */}
+            {/* Grafik Dummy */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
                 <div className="bg-white p-6 rounded-xl shadow">
                     <h2 className="text-lg font-semibold mb-4 text-[#1A4D2E]">Progress Proyek</h2>
-                    <ResponsiveContainer width="100%" height={260}>
-                        <LineChart data={progressData}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="name" />
-                            <YAxis />
-                            <Tooltip />
-                            <Line type="monotone" dataKey="progress" stroke="#1A4D2E" strokeWidth={3} />
-                        </LineChart>
-                    </ResponsiveContainer>
+                    <div className="h-[260px] bg-gray-200 flex items-center justify-center rounded">
+                        Chart Placeholder
+                    </div>
                 </div>
-
                 <div className="bg-white p-6 rounded-xl shadow">
                     <h2 className="text-lg font-semibold mb-4 text-[#1A4D2E]">Pemasukan & Pengeluaran</h2>
-                    <ResponsiveContainer width="100%" height={260}>
-                        <BarChart data={financialData}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                            <XAxis dataKey="month" />
-                            <YAxis />
-                            <Tooltip />
-                            <Bar dataKey="pemasukan" fill="#1A4D2E" />
-                            <Bar dataKey="pengeluaran" fill="#4F6F52" />
-                        </BarChart>
-                    </ResponsiveContainer>
+                    <div className="h-[260px] bg-gray-200 flex items-center justify-center rounded">
+                        Chart Placeholder
+                    </div>
                 </div>
             </div>
 
             {/* Aktivitas Terbaru & Deadline */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
                 {/* Aktivitas */}
                 <div className="bg-white p-6 rounded-xl shadow lg:col-span-2">
                     <h2 className="text-lg font-semibold text-[#1A4D2E] mb-4">Aktivitas Terbaru</h2>
-
                     <div className="space-y-4">
                         {activities.map((a) => (
                             <div key={a.id} className="p-4 bg-[#E8DFCA] rounded-lg">
@@ -119,7 +76,6 @@ const DashboardSuperadmin = () => {
                 {/* Deadline */}
                 <div className="bg-white p-6 rounded-xl shadow">
                     <h2 className="text-lg font-semibold text-[#1A4D2E] mb-4">Deadline Terdekat</h2>
-
                     <div className="space-y-4">
                         {deadlines.map((d) => (
                             <div key={d.id} className="p-4 bg-[#F5F5F5] rounded-lg border">
@@ -135,7 +91,6 @@ const DashboardSuperadmin = () => {
                         ))}
                     </div>
                 </div>
-
             </div>
         </div>
     );

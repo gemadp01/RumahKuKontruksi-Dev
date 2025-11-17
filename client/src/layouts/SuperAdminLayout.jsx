@@ -1,26 +1,56 @@
-// client/src/admin/layout/SuperadminLayout.jsx
-import React from "react";
-import Sidebar from "../components/superadmin/Sidebar";
-import Topbar from "../components/superadmin/Topbar";
+// client/src/layouts/SuperAdminLayout.jsx
+import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
 
-const SuperadminLayout = ({ children }) => {
+import SidebarBase from "@client/components/ui/SidebarBase";
+import TopbarBase from "@client/components/ui/TopbarBase";
+
+import superadminSidebar from "@client/components/ui/sidebar-data/superadmin";
+import superadminTopbar from "@client/components/ui/topbar-data/superadmin";
+
+import notificationService from "@server/services/NotificationService";
+import { dummyNotifications } from "@server/data/dummyNotifications";
+
+const SuperAdminLayout = () => {
+
+    // ➜ STATE DIPAKAI BERSAMA (Sidebar & Topbar)
+    const [isCollapsed, setIsCollapsed] = useState(false);
+
     return (
-        <div className="flex min-h-screen bg-gray-50 text-gray-800">
+        <div className="flex">
+
             {/* SIDEBAR */}
-            <Sidebar />
+            <SidebarBase
+                menu={superadminSidebar}
+                user={superadminTopbar.user}
+                isCollapsed={isCollapsed}
+                setIsCollapsed={setIsCollapsed}
+            />
 
-            {/* MAIN AREA */}
-            <div className="flex flex-col flex-1 ml-72">
+            {/* MAIN CONTENT AREA */}
+            <div
+                className={`flex-1 transition-all duration-300`}
+                style={{
+                    marginLeft: isCollapsed ? "5rem" : "18rem",
+                }}
+            >
+
                 {/* TOPBAR */}
-                <Topbar />
+                <TopbarBase
+                    title={superadminTopbar.title}
+                    user={superadminTopbar.user}
+                    isCollapsed={isCollapsed}
+                    notificationService={notificationService}
+                    dummyNotifications={dummyNotifications}
+                />
 
-                {/* CONTENT */}
-                <main className="p-8">
-                    {children}
+                {/* PAGE CONTENT VIA OUTLET */}
+                <main className="p-6 mt-16">
+                    <Outlet />
                 </main>
             </div>
         </div>
     );
 };
 
-export default SuperadminLayout;
+export default SuperAdminLayout;
