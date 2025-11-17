@@ -1,4 +1,4 @@
-// client/src/components/ui/SidebarBase.jsx
+// client/src/components/ui/sidebar/SidebarBase.jsx
 
 import React from "react";
 import { FiChevronsLeft, FiChevronsRight } from "react-icons/fi";

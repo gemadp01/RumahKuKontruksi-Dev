@@ -1,4 +1,4 @@
-// client/src/components/ui/TopbarBase.jsx
+// client/src/components/ui/topbar/TopbarBase.jsx
 import React, { useState, useEffect } from "react";
 import { FiBell } from "react-icons/fi";
 

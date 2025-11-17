@@ -1,4 +1,4 @@
-// client/src/components/ui/TopbarNotification.jsx
+// client/src/components/ui/topbar/TopbarNotification.jsx
 import React from "react";
 import LogNotifikasi from "./LogNotifikasi";
 

@@ -5,7 +5,7 @@ import PengawasFilters from "../../components/pengawas/PengawasFilters";
 import PengawasTable from "../../components/pengawas/PengawasTable";
 import PengawasFormModal from "../../components/pengawas/PengawasFormModal";
 import PengawasDetailDrawer from "../../components/pengawas/PengawasDetailDrawer";
-import { Button } from "@/components/ui/button";
+import { Button } from "@client/components/ui/button";
 
 const DataPengawasPage = () => {
     const [filters, setFilters] = useState({ search: "" });

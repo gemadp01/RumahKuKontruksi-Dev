@@ -1,4 +1,4 @@
-// client/src/components/ui/LogNotifikasi.jsx
+// client/src/components/ui/topbar/LogNotifikasi.jsx
 import React from "react";
 import { FiCheckCircle } from "react-icons/fi";
 

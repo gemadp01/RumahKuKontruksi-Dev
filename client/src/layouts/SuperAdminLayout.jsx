@@ -2,11 +2,11 @@
 import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
-import SidebarBase from "@client/components/ui/SidebarBase";
-import TopbarBase from "@client/components/ui/TopbarBase";
+import SidebarBase from "@client/components/ui/sidebar/SidebarBase";
+import TopbarBase from "@client/components/ui/topbar/TopbarBase";
 
-import superadminSidebar from "@client/components/ui/sidebar-data/superadmin";
-import superadminTopbar from "@client/components/ui/topbar-data/superadmin";
+import superadminSidebar from "@client/components/ui/sidebar/sidebar-data/superadmin";
+import superadminTopbar from "@client/components/ui/topbar/topbar-data/superadmin";
 
 import notificationService from "@server/services/NotificationService";
 import { dummyNotifications } from "@server/data/dummyNotifications";

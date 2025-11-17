@@ -1,4 +1,4 @@
-// client/src/components/ui/SidebarItem.jsx
+// client/src/components/ui/sidebar/SidebarItem.jsx
 import React from "react";
 
 const SidebarItem = ({ icon: Icon, label, href, active, collapsed }) => {

@@ -1,4 +1,4 @@
-// client/src/components/ui/SidebarDropdown.jsx
+// client/src/components/ui/sidebar/SidebarDropdown.jsx
 import React, { useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 

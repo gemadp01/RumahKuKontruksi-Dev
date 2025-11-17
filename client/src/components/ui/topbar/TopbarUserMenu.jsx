@@ -1,4 +1,4 @@
-// client/src/components/ui/TopbarUserMenu.jsx
+// client/src/components/ui/topbar/TopbarUserMenu.jsx
 import React from "react";
 import { FiChevronDown, FiLogOut, FiSettings, FiUser } from "react-icons/fi";
 
