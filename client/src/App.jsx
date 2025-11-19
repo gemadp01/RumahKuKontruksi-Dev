@@ -22,7 +22,7 @@ import Profil from "./pages/konsumen/Profil";
 import DashboardSuperadmin from "./pages/superadmin/DashboardSuperadmin";
 import DataAdmin from "./pages/superadmin/DataAdminPage";
 import DataPengawas from "./pages/superadmin/DataPengawasPage";
-
+import DataMandor from "./pages/superadmin/DataMandorPage";
 
 
 
@@ -51,6 +51,7 @@ function App() {
           <Route path="dashboard" element={<DashboardSuperadmin />} />
           <Route path="data-admin" element={<DataAdmin />} />
           <Route path="data-pengawas" element={<DataPengawas />} />
+          <Route path="data-mandor" element={<DataMandor />} />
        
 
         </Route>

@@ -1,3 +1,4 @@
+// client/src/components/common/Button.jsx
 import React from "react";
 
 export default function Button({ children, onClick, className = "" }) {

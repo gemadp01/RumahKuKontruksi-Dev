@@ -1,3 +1,5 @@
+// components/common/ProfileSection.jsx
+
 import React from "react";
 
 export default function ProfileSection({ foto, nama, role }) {

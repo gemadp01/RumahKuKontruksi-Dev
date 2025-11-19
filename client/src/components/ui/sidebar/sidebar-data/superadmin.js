@@ -25,7 +25,7 @@ export default [
         items: [
             { label: "Admin", href: "/superadmin/data-admin" },
             { label: "Pengawas", href: "/superadmin/data-pengawas" },
-            { label: "Mandor", href: "/admin/user/mandor" },
+            { label: "Mandor", href: "/superadmin/data-mandor" },
             { label: "Konsumen", href: "/admin/user/konsumen" },
             { label: "Perusahaan & PIC", href: "/admin/user/perusahaan" },
         ],
