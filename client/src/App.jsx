@@ -1,6 +1,3 @@
-// src/App.jsx
-
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // ===== LAYOUTS =====
@@ -22,11 +19,6 @@ import Profil from "./pages/konsumen/Profil";
 import DashboardSuperadmin from "./pages/superadmin/DashboardSuperadmin";
 import DataAdmin from "./pages/superadmin/DataAdminPage";
 import DataPengawas from "./pages/superadmin/DataPengawasPage";
-
-
-
-
-
 
 function App() {
   return (
@@ -51,10 +43,7 @@ function App() {
           <Route path="dashboard" element={<DashboardSuperadmin />} />
           <Route path="data-admin" element={<DataAdmin />} />
           <Route path="data-pengawas" element={<DataPengawas />} />
-       
-
         </Route>
-        
       </Routes>
     </Router>
   );
