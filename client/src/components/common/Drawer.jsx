@@ -1,3 +1,5 @@
+// client/src/components/common/Drawer.jsx
+
 import React from "react";
 
 export default function Drawer({ isOpen, onClose, children, width = "max-w-md" }) {
