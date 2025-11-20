@@ -20,6 +20,18 @@ import DashboardSuperadmin from "./pages/superadmin/DashboardSuperadmin";
 import DataAdmin from "./pages/superadmin/DataAdminPage";
 import DataPengawas from "./pages/superadmin/DataPengawasPage";
 
+// ===== HALAMAN ADMIN =====
+import AdminLayout from "./layouts/AdminLayout";
+import DashboardAdmin from "./pages/admin/DashboardAdmin";
+
+// ===== HALAMAN PENGAWAS =====
+import PengawasLayout from "./layouts/PengawasLayout";
+import DashboardPengawas from "./pages/pengawas/DashboardPengawas";
+
+// ===== HALAMAN MANDOR =====
+import MandorLayout from "./layouts/MandorLayout";
+import DashboardMandor from "./pages/mandor/DashboardMandor";
+
 function App() {
   return (
     <Router>
@@ -43,6 +55,21 @@ function App() {
           <Route path="dashboard" element={<DashboardSuperadmin />} />
           <Route path="data-admin" element={<DataAdmin />} />
           <Route path="data-pengawas" element={<DataPengawas />} />
+        </Route>
+
+        {/* ================== ADMIN LAYOUT ================== */}
+        <Route path="/admin" element={<AdminLayout />}>
+          <Route path="dashboard" element={<DashboardAdmin />} />
+        </Route>
+
+        {/* ================== PENGAWAS LAYOUT ================== */}
+        <Route path="/pengawas" element={<PengawasLayout />}>
+          <Route path="dashboard" element={<DashboardPengawas />} />
+        </Route>
+
+        {/* ================== MANDOR LAYOUT ================== */}
+        <Route path="/mandor" element={<MandorLayout />}>
+          <Route path="dashboard" element={<DashboardMandor />} />
         </Route>
       </Routes>
     </Router>
