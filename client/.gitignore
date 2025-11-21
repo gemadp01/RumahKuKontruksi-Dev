@@ -1,5 +1,5 @@
 #env
-client/.env
+.env
 
 # Logs
 logs
